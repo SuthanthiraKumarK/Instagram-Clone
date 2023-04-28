@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone By SK</title>
+
+<link rel="shortcut icon" href="./assets/images/project_logo.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/css/insta.css">
+</head>
+
+<body>
+
+<!-- Before Login UI -->
+<!-- Login Form -->
+<div class="container-fluid myForm flex justify-content-center align-items-center">
+    <form class="form d-flex col-8 col-sm-5 col-xl-4">
+
+      <div class="formHeader form-group">
+        <h3 class="mt-3 mb-4">Instagram</h3>
+      </div>
+
+      <div class="inputs form-group d-flex">
+      <input type="text" class="form-control mb-3 d-flex" name="userId" id="userId" placeholder="phone number, username, email address">
+
+      <p class="errorMsgUid hidden"></p>
+
+      <input type="password" class="mb-3 form-control" name="password" id="password" placeholder="password">
+
+      <p class="errorMsgPw hidden"></p>
+
+      <p class="show"><a href="#">
+        <i class="fa-solid fa-eye iconShow me-1"></i>
+        <i class="fa-solid fa-eye-slash iconHide hidden me-1"></i>
+        <span class="toggleText">show</span> password</a></p>
+
+      <input type="button" class="mb-2 buttonLogin" value="login" id="login">
+    </div>
+
+    <div class="divider form-group d-flex">
+      <div class="leftDivider"><hr></div>
+      <div class="centerDivider">
+        <p>OR</p> 
+      </div>
+      <div class="rightDivider"><hr></div>
+    </div>
+
+    <div class="login form-group d-flex">
+      <a href="#" class="ms-1"><p><i class="fa-brands fa-square-facebook me-1"></i> Log in with Facebook</p></a>
+
+      <a href="#"><p>Forgotten your Password?</p></a>
+    </div>
+    </form>
+
+    <div class="signUp d-flex col-8 col-sm-5 col-xl-4 mt-2">
+      <p class="mt-2">Don't have an account?
+         <a href="#"><b>Sign up</b></a></p>
+    </div>
+
+    <div class="getApp d-flex col-8 col-sm-5 col-xl-4 mt-3" >
+      <div class="getText">
+       <p>Get the App.</p>
+      </div>
+
+      <div class="getImage d-flex col-flex-column justify-content-center">
+       <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=US&pli=1" target="_blank"><img src="./assets/images/Login Page Data/G_PlayStore_Logo.png" alt="Googleplay_store-Logo-Insta" width="134px" height="40px"></a>
+
+       <a href="https://apps.microsoft.com/store/detail/instagram/9NBLGGH5L9XT" target="_blank"><img src="./assets/images/Login Page Data/Microsoft_Store_Logo.png" alt="Microsoft_Store-Logo-Insta" width="134px" height="40px"></a>
+      </div>
+    </div>
+
+    <div class="copy-right d-flex col-8 col-sm-5 col-xl-4 mt-3">
+      <p>© 2023 Instagram Clone by Freedom Kumar</p>
+    </div>
+</div>
+
+<!-- After Login UI -->
+<!-- NavBar -->
+<div class="navdisplay hidden">
+<nav class="navbar container-fluid">
+
+        <!-- LOGO -->
+        <div class="col-2 logo ps-0 ms-3 d-flex">
+           <a href="#"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+
+          <a href="#"><p class="ltext d-inline d-sm-none d-md-block">Instagram</p></a>
+       </div>
+
+        <!-- NavBar -->
+        <ul class="nav col-8 d-flex me-6">
+          <li class="nav-item d-sm-inline d-none ">
+              <a class="nav-link" href="#"><i class="fa-solid fa-house"></i></a>
+          </li>
+
+          <div class="search-box d-sm-inline d-none">
+          <li class="nav-item">
+            <input type="search" class="d-none d-md-inline" name="search" id="search" placeholder="search here...">
+
+            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+        </div>
+
+          <li class="nav-item d-sm-inline">
+            <a class="nav-link" href="#"><i class="fa-solid fa-circle-plus newPost"></i></a>
+          </li>
+
+          <li class="nav-item d-sm-inline d-none">
+            <a class="nav-link" href="#"><i class="fa-solid fa-film"></i></a>
+          </li>
+
+          <li class="nav-item d-sm-inline d-none">
+              <a class="nav-link" href="#"><i class="fa-solid fa-paper-plane"></i></a>
+          </li>
+
+          <li class="nav-item d-sm-inline d-none">
+                <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i></a>
+          </li>
+
+          <li class="nav-item d-sm-inline">
+            <a class="nav-link log-out" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+          </li>
+        </ul>
+
+        <!-- Profile Pic -->
+      <div class="col-2 profilePic d-sm-flex">
+         <a href="#"><img class="image" src="./assets/images/Current Id Dp.png" alt="profilePic" width="30px" height="30px"></a>
+      </div>
+</nav>
+</div>
+
+<!-- After Login UI -->
+<!-- Main Content -->
+<div class="container-fluid main-content" style="margin-left: 2px;">
+<!-- Left Side -->
+    <div class="left col-12 col-md-7 hidden">
+
+<!-- Stories -->
+      <div class="stories d-flex mt-2">
+          <div class="story me-1">
+
+            <div class="add-story">
+             <a href="#"><i class="fa-solid fa-plus fa-lg"></i>
+            </div>
+
+             <p class="ms-2">Add Story</p></a>
+          </div>
+
+          <div class="new-story-field d-flex">
+
+          <div class="story demo-story d-flex">
+             <a href="#"><img class="image image-story" src="./assets/images/Current Id Dp.png" alt="profilePic" width="40px" height="40px">
+
+             <p class="story-id">kumaroffl19</p></a>
+          </div>
+        </div>
+        </div>
+
+<!-- Post -->
+      <div class="post mt-2">
+        <div class="post-header mt-2 ms-1 d-flex">
+          <div>
+            <div class="idDetails d-flex mt-1">
+               <a href="#"><img class="image" src="./assets/images/Current Id Dp.png" alt="profilePic" width="34px" height="35px"></a>
+
+               <a href="#" class="anchor"><h1>kumaroffl19</h1></a>
+            </div>
+
+              <a href="#"><p>Kovilpatti</p></a>
+          </div>
+
+            <div>
+              <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+            </div>
+        </div>
+
+      <div class="post-content">
+        <div class="post-image-cover">
+
+          <div class="post-image">
+            <img src="./assets/images/Initial Post Image.jpeg" class="img-fluid" alt="post-img" width="500px">
+          </div>
+
+        </div>
+
+            <p>23 MINUTES AGO...</p>
+      </div>
+
+      <div class="post-icons">
+        <ul class="nav">
+         <div class="icons-left ms-2">
+           <li><a href="#"><i class="fa-regular fa-heart like"></i></a></li>
+
+           <li><a href="#"><i class="fa-regular fa-comment"></i></a></li>
+
+           <li><a href="#"><i class="fa-regular fa-paper-plane"></i></a></i></li>
+
+         </div>
+
+         <div class="icons-left">
+           <li><a href="#"><i class="fa-regular fa-bookmark save"></i></a></li>
+         </div>
+
+        </ul>
+      </div>
+
+      <div class="post-likes">
+       <a href="#"><img  class="z-index-2" src="./assets/images/User id Data/pavi_the_chief.jpg" alt="likes" width="15px" height="15px"></a>
+
+       <a href="#"><img  class="z-index-1" src="./assets/images/User id Data/freedom_offl_19.jpg" alt="likes" width="15px" height="15px"></a>
+
+       <a href="#"><img  class="z-index-n1" src="./assets/images/User id Data/sk_virat.jpg" alt="likes" width="15px" height="15px"></a>
+
+       <h6 class="like-details">Liked by <b><a href="#">someone</a></b> and <b><a href="#">23 others</a></b></h6>
+      </div>
+
+      <div class="post-comments">
+        <h6><a href="#">View all 23 comments</a></h6>
+      </div>
+      </div>
+
+    </div>
+</div>
+
+      <script src="./assets/js/insta.js"></script>
+</body>
+</html>
